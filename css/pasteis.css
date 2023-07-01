@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Skranji&display=swap');
+
+:root{
+    --fonte-titulos: 'Skranji', cursive;
+    --fonte-principal: 'Baloo Tamma 2', cursive;
+    
+    --cor-caixa: #fff765;
+    --cor-sombra: rgb(88, 84, 84);
+    --cor-preco: rgb(230, 230, 230);
+
+    /*
+    --cor-rodape: rgb(210, 194, 200);
+    */
+}
+
+body{
+    background-color: white;
+    font-family: var(--fonte-principal);
+}
+
+.c-titulo-principal{
+    font-size: 1.6em;
+    text-align: center;
+    font-family: var(--fonte-titulos);
+}
+
+.c-titulo-principal > img{
+    vertical-align: middle;
+}
+
+#c-caixa-principal{
+    min-width: 250px;
+    max-width: 650px;
+    padding: 10px;
+    margin: auto;
+    background-color: var(--cor-caixa);
+    border-radius: 15px;
+    border: 1px solid black;
+    box-shadow: 1px 1px 1px var(--cor-sombra);
+}
+
+#c-caixa-buttons-invisivel{
+    min-width: 190px;
+    max-width: 620px;
+    margin: auto;
+    display: flex;
+}
+
+#c-button-voltar{   
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 60px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px var(--cor-sombra);
+}
+
+@keyframes botão{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.05);
+    }
+}
+
+#c-button-voltar:hover{
+    color: red;
+    animation-name: botão;
+    animation-duration: .6s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.c-caixa-invisivel-2{
+    min-width: 190px;
+    max-width: 620px;
+    margin: auto;
+    background-color: var(--cor-caixa);
+    display: flex;
+    font-size: 1.1em;
+}
+
+.c-item{
+    font-weight: bold;
+    min-width: 80px;
+    max-width: 550px;
+    padding: 2px;
+    margin-top: 0px;
+    margin-right: 5px;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 3px;
+    border: 1px solid black;
+}
+
+.c-preco{
+    width: 90px;
+    height: 30px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    background-color: var(--cor-preco);
+    border-radius: 70px;
+    text-align: center;
+    border: 1px solid black;
+}

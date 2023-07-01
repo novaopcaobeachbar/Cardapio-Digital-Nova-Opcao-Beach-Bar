@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Skranji&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Pacifico&display=swap');
+
+:root{
+    --fonte-titulos: 'Skranji', cursive;
+    --fonte-principal: 'Baloo Tamma 2', cursive;
+    
+    --cor-caixa: #fff765;
+    --cor-sombra: rgb(88, 84, 84);
+    --cor-preco: rgb(230, 230, 230);
+    
+    /*
+    --cor-rodape: rgb(210, 194, 200);
+    */
+}
+
+*{
+    margin: 0;
+}
+
+body{
+    background-color: white;
+    font-family: var(--fonte-principal);
+}
+
+.c-titulo-principal{
+    margin-bottom: 15px;
+    font-size: 1.6em;
+    text-align: center;
+    font-family: var(--fonte-titulos);    
+}
+
+.c-titulo-principal > img{
+    vertical-align: middle;
+}
+
+#c-caixa-principal{
+    width: 290px;
+    height: 530px;
+    padding-bottom: 0px;
+    padding-top: 36px;
+    padding-right: 12px;
+    padding-left: 12px;
+    margin: auto;
+    margin-bottom: 10px;
+    background-color: var(--cor-caixa);
+    border-radius: 65px 15px;
+    border: 1px solid black;
+    box-shadow: 1px 1px 1px var(--cor-sombra);
+}
+
+@keyframes botão{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.05);
+    }
+}
+
+#c-caixa-buttons-invisivel{
+    min-width: 190px;
+    max-width: 620px;
+    margin: auto;
+    display: flex;
+}
+
+#c-button-voltar{ 
+    width: 50px;
+    height: 50px;
+    margin-left: 15px;
+    margin-bottom: 12px;
+    background-color: white;
+    border-radius: 60px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px var(--cor-sombra);  
+}
+
+#c-button-voltar:hover{
+    color: red;
+    animation-name: botão;
+    animation-duration: .6s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.c-caixa-invisivel-2{
+    min-width: 10px;
+    max-width: 250px;
+    margin: auto;
+    background-color: var(--cor-caixa);
+    display: flex;
+}
+
+#c-name{
+    font-family: var(--fonte-titulos);
+}
+
+.c-aviso{
+    min-width: 50px;
+    max-width: 230px;
+    padding: 4px;
+    margin: auto;
+    margin-bottom: 20px;
+    background-color: white;
+    font-family: var(--fonte-principal);
+    border-radius: 3px;
+    border: 1px solid black;
+}
